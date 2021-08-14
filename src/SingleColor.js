@@ -9,12 +9,12 @@ const SingleColor = ({ rgb, weight, index, hexColor }) => {
     useEffect(() => {
         const timeout = setTimeout(() => {
             setAlert(false)
-        }, 3000)
+        }, 2000)
         return () => clearTimeout(timeout)
     }, [alert])
     return (
         <article
-            className={`color ${index > 10 && 'color-light'}`}
+            className={`random ${index > 8 && 'color-light'}`}
             style={{ backgroundColor: `rgb(${bcg})` }}
             onClick={() => {
                 setAlert(true)
